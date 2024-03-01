@@ -1,8 +1,5 @@
 #include "webToken.h"
 
-AsyncWebServer server(8080);
-
-// index html
 const char index_html[] PROGMEM = R"rawliteral(
 <!doctype html>
 <html lang="en">
@@ -42,6 +39,8 @@ const char index_html[] PROGMEM = R"rawliteral(
 
 </html>
 )rawliteral";
+
+AsyncWebServer server(8080);
 
 void handleTokenSubmit(AsyncWebServerRequest *request)
 {
